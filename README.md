@@ -1,14 +1,20 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+is a simple task management web application designed to keep users on track to meeting their goals or responsibilities. Users are capable of adding their tasks with optional due dates, marking them complete, and removing tasks.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+- Add tasks: Create a task with a name and optional due date.
+- Complete checkbox: Tasks can be marked as complete.
+- Delete tasks: tasks can be removed from the list.
+- Form validation: validates inputs and disables invalid submissions.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+- Html, CSS
+- Javascript - emphasis on encapsulation
+- DOM
+- Form Validation
 
 ## Deployment
 
