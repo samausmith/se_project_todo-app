@@ -1,6 +1,6 @@
-# Simple Todo App
+# Task-It!!! App
 
-is a simple task management web application designed to keep users on track to meeting their goals or responsibilities. Users are capable of adding their tasks with optional due dates, marking them complete, and removing tasks.
+Task-It!!! is a simple task management web application designed to keep users on track to meeting their goals or responsibilities. Users are capable of adding their tasks with optional due dates, marking them complete, and removing tasks.
 
 ## Functionality
 
@@ -20,4 +20,4 @@ is a simple task management web application designed to keep users on track to m
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+- [Task-It!!!](https://samausmith.github.io/se_project_todo-app/)
