@@ -33,8 +33,7 @@ addTodoCloseBtn.addEventListener("click", () => {
   closeModal(addTodoPopup);
 });
 
-addTodoForm.addEventListener("submit", (evt) => {
-  evt.preventDefault();
+const createTodo = (evt) => {
   const name = evt.target.name.value;
   const dateInput = evt.target.date.value;
 
@@ -48,6 +47,17 @@ addTodoForm.addEventListener("submit", (evt) => {
   const todo = generateTodo(values);
   todosList.append(todo);
   closeModal(addTodoPopup);
+};
+addTodoForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+  createTodo(evt);
+  newTodoValidator.resetValidation();
+});
+
+document.addEventListener("keydown", (evt) => {
+  if (evt.key === "Escape") {
+    closeModal(addTodoPopup);
+  }
 });
 
 initialTodos.forEach((item) => {
@@ -57,4 +67,3 @@ initialTodos.forEach((item) => {
 
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
 newTodoValidator.enableValidation();
-newTodoValidator.resetValidation();

@@ -2,7 +2,9 @@ class FormValidator {
   constructor(settings, formElement) {
     this._formSelector = settings.formSelector;
     this._inputSelector = settings.inputSelector;
-    this._submitButtonSelector = settings.submitButtonSelector;
+    this._submitButtonSelector = formElement.querySelector(
+      settings.submitButtonSelector
+    );
     this._errorClass = settings.errorClass;
     this._inputErrorClass = settings.inputErrorClass;
     this._inactiveButtonClass = settings.inactiveButtonClass;
@@ -67,11 +69,8 @@ class FormValidator {
   }
 
   resetValidation() {
-    this._formElement.addEventListener("submit", (evt) => {
-      evt.preventDefault();
-      this._formElement.reset();
-      this._submitButtonSelector.classList.add(this._inactiveButtonClass);
-    });
+    this._formElement.reset();
+    this._submitButtonSelector.classList.add(this._inactiveButtonClass);
   }
 }
 
