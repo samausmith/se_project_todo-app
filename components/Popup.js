@@ -3,6 +3,7 @@ class Popup {
     this._popupElement = document.querySelector(popupSelector);
     this._popupCloseBtn = this._popupElement.querySelector(".popup__close");
     this._popupTodoBtn = document.querySelector(".button_action_add");
+    this._handleEscapeClose = this._handleEscapeClose.bind(this);
   }
 
   _handleEscapeClose(evt) {
@@ -13,11 +14,11 @@ class Popup {
 
   open() {
     this._popupElement.classList.add("popup_visible");
-    document.addEventListener("keydown", this._handleEscapeClose());
+    document.addEventListener("keydown", this._handleEscapeClose);
   }
   close() {
     this._popupElement.classList.remove("popup_visible");
-    document.removeEventListener("keydown", this._handleEscapeClose());
+    document.removeEventListener("keydown", this._handleEscapeClose);
   }
 
   setEventListeners() {
